@@ -26,7 +26,7 @@ function AddStaff() {
             console.error("No data");
             return;
           } else {
-                axios.post('http://localhost:3003/addStaff', {
+                axios.post('https://mybackend-1a9f650c8ab8.herokuapp.com/addStaff', {
                     first_name: first_name,
                     middle_name: middle_name,
                     last_name: last_name,

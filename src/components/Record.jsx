@@ -11,7 +11,7 @@ function Record() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("http://localhost:3003/records");
+        const result = await axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/records");
         setRecordList(result.data);
         console.log(result.data)
       } catch (error) {

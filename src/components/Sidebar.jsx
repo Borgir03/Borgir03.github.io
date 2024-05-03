@@ -12,7 +12,7 @@ const linkClass =
 function Sidebar() {
     const { setUsername, setPassword, setLoggedUser, setLoginStatus, } = useContext(DataContext)
     const logout = () => {
-        axios.get("http://localhost:3003/logout").then((response) => {
+        axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/logout").then((response) => {
           if (response.data.success) {
             setUsername("");
             setPassword("");

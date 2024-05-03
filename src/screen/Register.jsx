@@ -14,7 +14,7 @@ const Register = () => {
         console.error("No data");
         return;
       } else {
-            axios.post('http://localhost:3003/register', {
+            axios.post('https://mybackend-1a9f650c8ab8.herokuapp.com/register', {
                 email: email,
                 username: username,
                 password: password

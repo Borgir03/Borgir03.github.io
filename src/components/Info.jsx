@@ -46,7 +46,7 @@ function Info() {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const result = await axios.get("http://localhost:3003/patientInfo");
+            const result = await axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/patientInfo");
             setRecordList(result.data);
             console.log(result.data)
           } catch (error) {
@@ -73,7 +73,7 @@ function Info() {
           console.error("No data");
           return; } else {
         
-        axios.put("http://localhost:3003/updateRecord", { 
+        axios.put("https://mybackend-1a9f650c8ab8.herokuapp.com/updateRecord", { 
           id: selected.id,
           first_name: first,
           middle_name: middle,
@@ -148,7 +148,7 @@ function Info() {
       }
 
       const deleteRecord = (id) => {
-        axios.delete(`http://localhost:3003/deleteRecord/${id}`).then((response) => {
+        axios.delete(`https://mybackend-1a9f650c8ab8.herokuapp.com/deleteRecord/${id}`).then((response) => {
           setRecordList(
             recordList.filter((item) => {
               return item.id !== id;

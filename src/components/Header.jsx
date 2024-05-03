@@ -10,7 +10,7 @@ export default function Header() {
 	const navigate = useNavigate()
 
     const signout = () => {
-        axios.get("http://localhost:3003/logout").then((response) => {
+        axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/logout").then((response) => {
           if (response.data.success) {
             setUsername("");
             setPassword("");

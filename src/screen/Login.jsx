@@ -18,7 +18,7 @@ axios.defaults.withCredentials = true
         console.error("No data.");
         return;
       }
-    axios.post("http://localhost:3003/login", {
+    axios.post("https://mybackend-1a9f650c8ab8.herokuapp.com/login", {
         username: username,
         password: password
     }).then((response) => {
@@ -53,7 +53,7 @@ axios.defaults.withCredentials = true
   };
 
   useEffect(() => {
-    axios.get("http://localhost:3003/login").then((response) => {
+    axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/login").then((response) => {
         if (response.data.loggedIn === true) {
             setLoggedUser(response.data.user)
             console.log(loggedUser)
@@ -70,7 +70,7 @@ axios.defaults.withCredentials = true
   },)
 
   const userAuth = () => {
-    axios.get("http://localhost:3003/isAuth", {headers: {
+    axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/isAuth", {headers: {
         "x-access-token": localStorage.getItem("token")
     }}).then((response) => {
         console.log(response)

@@ -37,7 +37,7 @@ function List() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("http://localhost:3003/admins");
+        const result = await axios.get("https://mybackend-1a9f650c8ab8.herokuapp.com/admins");
         setAdminList(result.data);
       } catch (error) {
         if (error.response) {
@@ -58,7 +58,7 @@ function List() {
   },);
 
   const updateAdmin = (id) => {
-    axios.put("http://localhost:3003/updateStaff", { 
+    axios.put("https://mybackend-1a9f650c8ab8.herokuapp.com/updateStaff", { 
       id: selected.id,
       first_name: first,
       middle_name: middle,
@@ -119,7 +119,7 @@ function List() {
 
 
   const deleteAdmin = (id) => {
-    axios.delete(`http://localhost:3003/deleteStaff/${id}`).then((response) => {
+    axios.delete(`https://mybackend-1a9f650c8ab8.herokuapp.com/deleteStaff/${id}`).then((response) => {
       setAdminList(
         adminList.filter((item) => {
           return item.id !== id;
