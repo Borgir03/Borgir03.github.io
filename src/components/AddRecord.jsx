@@ -26,7 +26,7 @@ function AddRecord() {
             console.error("No data");
             return;
           } else {
-                axios.post('https://mybackend-1a9f650c8ab8.herokuapp.com/addRecord', {
+                axios.post('http://localhost:3003/addRecord', {
                     first_name: first_name,
                     middle_name: middle_name,
                     last_name: last_name,
