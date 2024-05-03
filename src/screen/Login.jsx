@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-const { username, setUsername, password, setPassword, setLoggedUser, loggedUser,setAuth, loginStatus, setLoginStatus } = useContext(DataContext)
+const { username, setUsername, password, setPassword, setLoggedUser, loggedUser,setAuth, setLoginStatus } = useContext(DataContext)
 const [errorMessage, setErrorMessage] = useState("");
 
 const navigate = useNavigate()
@@ -67,7 +67,7 @@ axios.defaults.withCredentials = true
       window.location.reload();
       console.log(error)
   });
-  }, [])
+  },)
 
   const userAuth = () => {
     axios.get("http://localhost:3003/isAuth", {headers: {

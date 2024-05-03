@@ -28,7 +28,7 @@ function Sidebar() {
   return (
     <div className='flex flex-col bg-[#33658A] p-3 w-60 text-white'>
         <div className='flex items-center gap-5 px-1 py-3'>
-            <img src={LOGO} className='w-12' />
+            <img src={LOGO} className='w-12' alt='logo'/>
             <span className='text-lg font-bold'>Nightingle</span>
         </div>
         <div className='flex-1 py-8 flex flex-col gap-2'>

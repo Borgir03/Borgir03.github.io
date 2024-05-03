@@ -55,7 +55,7 @@ function List() {
 
     const interval = setInterval(fetchData, 2000);
     return () => clearInterval(interval);
-  }, []);
+  },);
 
   const updateAdmin = (id) => {
     axios.put("http://localhost:3003/updateStaff", { 
@@ -122,7 +122,7 @@ function List() {
     axios.delete(`http://localhost:3003/deleteStaff/${id}`).then((response) => {
       setAdminList(
         adminList.filter((item) => {
-          return item.id != id;
+          return item.id !== id;
         })
       );
     });
