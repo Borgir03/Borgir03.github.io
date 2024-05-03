@@ -16,7 +16,7 @@ function AddRecord() {
   const [civil, setCivil] = useState('');
   const [address, setAddress] = useState('');
   const [contact, setContact] = useState('');
-  const [checked_by] = useState('');
+  const [checked_by, setCheck] = useState('');
   
     const navigate = useNavigate()
   
