@@ -33,11 +33,11 @@ function AddRecord() {
                     birthday: birthday,
                     age: age,
                     checked_by: checked_by,
+                    religion: religion,
                     gender: gender,
                     civil: civil,
-                    contact: contact,
                     address: address,
-                    religion: religion
+                    contact: contact
                 }).then(()=>{
                     console.log('Account has been Created')
                     alert('Account has been created.');
