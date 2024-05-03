@@ -65,7 +65,7 @@ function Info() {
     
         const interval = setInterval(fetchData, 2000);
         return () => clearInterval(interval);
-      }, []);
+      },);
 
       const updateRecord = (id, birthday) => {
         const formattedBirthday = new Date(birthday).toISOString().slice(0, 10);

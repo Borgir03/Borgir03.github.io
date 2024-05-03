@@ -30,7 +30,7 @@ function Record() {
 
     const interval = setInterval(fetchData, 2000);
     return () => clearInterval(interval);
-  }, []);
+  },);
 
 
   const filteredRecord = recordList.filter(record => {
